@@ -37,10 +37,10 @@ The daemon image contains versions of `k8s.io/client-go` and the
 worker nodes. Kubernetes aims to provide forwards & backwards
 compatibility of one minor version between client and server:
 
-| kured  | kubectl | k8s.io/client-go | k8s.io/apimachinery | expected kubernetes compatibility |
-|--------|---------|------------------|---------------------|-----------------------------------|
-| 1.1.0  | 1.12.1  | v9.0.0           | release-1.12        | 1.11.x, 1.12.x, 1.13.x            |
-| 1.0.0  | 1.7.6   | v4.0.0           | release-1.7         | 1.6.x, 1.7.x, 1.8.x               | 
+| kured  | kubectl | k8s.io/client-go | k8s.io/apimachinery | expected kubernetes compatibility | go version compatibility |
+|--------|---------|------------------|---------------------|-----------------------------------|--------------------------|
+| 1.1.0  | 1.12.1  | v9.0.0           | release-1.12        | 1.11.x, 1.12.x, 1.13.x            | >= 1.10                  |
+| 1.0.0  | 1.7.6   | v4.0.0           | release-1.7         | 1.6.x, 1.7.x, 1.8.x               | >= 1.7                   |
 
 See the [release notes](https://github.com/weaveworks/kured/releases)
 for specific version compatibility information, including which
